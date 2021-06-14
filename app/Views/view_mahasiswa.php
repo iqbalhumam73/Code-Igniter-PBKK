@@ -16,7 +16,8 @@
     }
 </style>
 
-<body>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- Navbar -->
     <div class="w3-top">
         <div class="w3-bar w3-black w3-card">
@@ -25,6 +26,42 @@
             <a href="/profil" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Profil Diri</a>
             <a href="/mahasiswa" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Data Mahasiswa</a>
             <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+        </div>
+    </div>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <br><br><br>
+                <h1 class="mt-30">Data Mahasiswa Arsitektur</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Peringkat</th>
+                            <th scope="col"> Nama Lengkap </th>
+                            <th scope="col"> NRP </th>
+                            <th scope="col"> Asal Sekolah </th>
+                            <th scope="col"> Alamat </th>
+                            <th scope="col"> Perintah </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Manuel Garcia Trinoyo</td>
+                            <td>55001</td>
+                            <td>SMA Kristen Petra 1</td>
+                            <td>Jl. Dinoyo Utara X/II</td>
+                            <td>
+                                <a href="" class="btn btn-warning">Edit</a>
+                            </td>
+                        </tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
