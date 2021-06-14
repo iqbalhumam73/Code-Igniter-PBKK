@@ -48,17 +48,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Manuel Garcia Trinoyo</td>
-                            <td>55001</td>
-                            <td>SMA Kristen Petra 1</td>
-                            <td>Jl. Dinoyo Utara X/II</td>
-                            <td>
-                                <a href="" class="btn btn-warning">Edit</a>
-                            </td>
-                        </tr>
-                        </tr>
+                        <?php foreach ($mahasiswa as $mhs) : ?>
+                            <tr>
+                                <th scope="row"><?= $mhs['mhs_urutan']; ?></th>
+                                <td><?= $mhs['mhs_nama']; ?></td>
+                                <td><?= $mhs['mhs_nrp']; ?></td>
+                                <td><?= $mhs['mhs_asalsekolah']; ?></td>
+                                <td><?= $mhs['mhs_alamat']; ?></td>
+                                <td>
+                                    <a href="" class="btn btn-warning">Edit</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
