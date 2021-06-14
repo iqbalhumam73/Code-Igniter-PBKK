@@ -8,4 +8,8 @@ class Pages extends BaseController
     {
         return view('profildiri');
     }
+    public function mahasiswa()
+    {
+        return view('view_mahasiswa');
+    }
 }
