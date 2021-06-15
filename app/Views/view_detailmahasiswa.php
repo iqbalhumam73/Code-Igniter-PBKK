@@ -34,34 +34,18 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <br><br><br>
-                <h1 class="mt-30">Data Mahasiswa Arsitektur</h1>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">Peringkat</th>
-                            <th scope="col"> Nama Lengkap </th>
-                            <th scope="col"> NRP </th>
-                            <th scope="col"> Asal Sekolah </th>
-                            <th scope="col"> Alamat </th>
-                            <th scope="col"> Perintah </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($mahasiswa as $mhs) : ?>
-                            <tr>
-                                <th scope="row"><?= $mhs['mhs_urutan']; ?></th>
-                                <td><?= $mhs['mhs_nama']; ?></td>
-                                <td><?= $mhs['mhs_nrp']; ?></td>
-                                <td><?= $mhs['mhs_asalsekolah']; ?></td>
-                                <td><?= $mhs['mhs_alamat']; ?></td>
-                                <td>
-                                    <a href="/mahasiswa/<?= $mhs['mhs_nrp']; ?>" class="btn btn-success">Open</a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                <ul>
+                    <br><br><br>
+                    <h2><b><?= $mahasiswa['mhs_nama']; ?> </b></h2>
+                    <h4>Urutan : <?= $mahasiswa['mhs_urutan']; ?></h4>
+                    <h4>NRP : <?= $mahasiswa['mhs_nrp']; ?> </h4>
+                    <h4>Asal Sekolah : <?= $mahasiswa['mhs_asalsekolah']; ?> </h4>
+                    <h4>Alamat : <?= $mahasiswa['mhs_alamat']; ?> </h4>
+                    <br>
+                    <button class="btn btn-warning">Edit Mahasiswa</button>
+                    <button class="btn btn-danger">Hapus Mahasiswa</button>
+                    <a href="/mahasiswa" class="btn btn-success">Kembali</a>
+                </ul>
             </div>
         </div>
     </div>

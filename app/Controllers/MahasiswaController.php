@@ -15,12 +15,17 @@ class MahasiswaController extends BaseController
 
     public function index()
     {
-        $mahasiswa = $this->mahasiswaModel->findAll();
-
         $data = [
-            'mahasiswa' => $mahasiswa
+            'mahasiswa' => $this->mahasiswaModel->getMahasiswa()
         ];
 
         return view('view_mahasiswa', $data);
+    }
+    public function detail($mhs_nrp)
+    {
+        $data = [
+            'mahasiswa' => $this->mahasiswaModel->getMahasiswa($mhs_nrp)
+        ];
+        return view('view_detailmahasiswa', $data);
     }
 }

@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/profil', 'Pages::index');
 $routes->get('/mahasiswa', 'MahasiswaController::index');
+$routes->get('/mahasiswa/(:segment)', 'MahasiswaController::detail/$1');
 
 /*
  * --------------------------------------------------------------------
