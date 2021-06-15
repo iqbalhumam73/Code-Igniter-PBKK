@@ -36,6 +36,11 @@
             <div class="col">
                 <br><br><br>
                 <h1 class="mt-30">Data Mahasiswa Arsitektur 2021</h1>
+                <?php if (session()->getFlashdata('pesan')) : ?>
+                    <div class="alert alert-info" role="alert">
+                        <?= session()->getFlashdata('pesan'); ?>
+                    </div>
+                <?php endif; ?>
                 <table class="table table-bordered">
                     <thead>
                         <tr>

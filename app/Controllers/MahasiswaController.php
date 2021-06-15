@@ -50,6 +50,7 @@ class MahasiswaController extends BaseController
             'mhs_asalsekolah' => $this->request->getVar('mhs_asalsekolah'),
             'mhs_alamat' => $this->request->getVar('mhs_alamat')
         ]);
+        session()->setFlashdata('pesan', 'Mahasiswa berhasil ditambahkan.');
         return redirect()->to('/mahasiswa');
     }
 }
