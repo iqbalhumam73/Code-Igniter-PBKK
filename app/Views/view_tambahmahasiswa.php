@@ -33,18 +33,34 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-8">
                 <ul>
                     <br><br><br>
-                    <h2><b><?= $mahasiswa['mhs_nama']; ?> </b></h2>
-                    <h4>Urutan : <?= $mahasiswa['mhs_urutan']; ?></h4>
-                    <h4>NRP : <?= $mahasiswa['mhs_nrp']; ?> </h4>
-                    <h4>Asal Sekolah : <?= $mahasiswa['mhs_asalsekolah']; ?> </h4>
-                    <h4>Alamat : <?= $mahasiswa['mhs_alamat']; ?> </h4>
-                    <br>
-                    <button class="btn btn-warning">Edit Mahasiswa</button>
-                    <button class="btn btn-danger">Hapus Mahasiswa</button>
-                    <a href="/mahasiswa" class="btn btn-primary">Kembali</a>
+                    <h2>Tambah Mahasiswa</h2>
+                    <form action="/mahasiswaController/Simpan" method="post">
+                        <?= $csrf_field(); ?>
+                        <div class="mb-3">
+                            <label for="mhs_nama" class="form-label">Nama Lengkap</label>
+                            <input type="name" class="form-control" id="mhs_nama" name="mhs_nama" autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mhs_peringkat" class="form-label">Peringkat</label>
+                            <input type="number" class="form-control" id="mhs_peringkat" name="mhs_peringkat">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mhs_asalsekolah" class="form-label">Asal Sekolah</label>
+                            <input type="name" class="form-control" id="mhs_asalsekolah" name="mhs_asalsekolah">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mhs_alamat" class="form-label">Asal Sekolah</label>
+                            <input type="name" class="form-control" id="mhs_alamat" name="mhs_alamat">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Data yang dimasukkan sudah benar</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </ul>
             </div>
         </div>

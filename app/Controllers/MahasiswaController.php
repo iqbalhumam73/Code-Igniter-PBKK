@@ -28,4 +28,12 @@ class MahasiswaController extends BaseController
         ];
         return view('view_detailmahasiswa', $data);
     }
+
+    public function tambah()
+    {
+
+        $data = [];
+
+        return view('view_tambahmahasiswa', $data);
+    }
 }

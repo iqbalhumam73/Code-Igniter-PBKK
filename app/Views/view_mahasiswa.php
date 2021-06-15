@@ -35,7 +35,7 @@
         <div class="row">
             <div class="col">
                 <br><br><br>
-                <h1 class="mt-30">Data Mahasiswa Arsitektur</h1>
+                <h1 class="mt-30">Data Mahasiswa Arsitektur 2021</h1>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -56,12 +56,13 @@
                                 <td><?= $mhs['mhs_asalsekolah']; ?></td>
                                 <td><?= $mhs['mhs_alamat']; ?></td>
                                 <td>
-                                    <a href="/mahasiswa/<?= $mhs['mhs_nrp']; ?>" class="btn btn-success">Open</a>
+                                    <a href="/mahasiswa/detail/<?= $mhs['mhs_nrp']; ?>" class="btn btn-primary">Open</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+                <a href="/mahasiswa/tambah" class="btn btn-success">Tambah Mahasiswa Baru</a>
             </div>
         </div>
     </div>
