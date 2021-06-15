@@ -9,6 +9,7 @@ class MahasiswaModel extends Model
     protected $table = 'mahasiswa';
     protected $primaryKey = 'nrp';
     protected $useTimestamps = true;
+    protected $allowedFields = ['mhs_nama', 'mhs_urutan', 'mhs_asalsekolah', 'mhs_alamat'];
 
     public function getMahasiswa($mhs_nrp = false)
     {
