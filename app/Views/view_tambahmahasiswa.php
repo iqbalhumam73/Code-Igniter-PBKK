@@ -37,6 +37,11 @@
                 <ul>
                     <br><br><br>
                     <h2>Tambah Mahasiswa</h2>
+                    <?php if (session()->getFlashdata('warning')) : ?>
+                        <div class="alert alert-warning" role="alert">
+                            <?= session()->getFlashdata('warning'); ?>
+                        </div>
+                    <?php endif; ?>
                     <form action="/mahasiswaController/Simpan" method="post">
                         <?= csrf_field(); ?>
                         <div class="mb-3">

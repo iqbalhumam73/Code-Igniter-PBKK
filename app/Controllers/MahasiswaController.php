@@ -36,13 +36,28 @@ class MahasiswaController extends BaseController
     public function tambah()
     {
 
-        $data = [];
+        session();
+        $data = [
+            'validation' => \Config\Services::validation()
+        ];
 
         return view('view_tambahmahasiswa', $data);
     }
 
     public function simpan()
     {
+        // validasi input
+        if (!$this->validate([
+            'mhs_nama' => 'required',
+            'mhs_urutan' => 'required',
+            'mhs_asalsekolah' => 'required',
+            'mhs_alamat' => 'required'
+        ])) {
+            $validation = \Config\Services::validation();
+            // dd($validation);
+            // session()->setFlashdata('warning', 'Tidak berhasil memassukan data mahasiswa baru.');
+            return redirect()->to('/mahasiswa/tambah')->withInput()->with('validation', $validation);
+        }
         // $inputdata = $this->request->getVar();
         $this->mahasiswaModel->save([
             'mhs_nama' => $this->request->getVar('mhs_nama'),
