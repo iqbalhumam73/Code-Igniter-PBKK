@@ -90,4 +90,10 @@ class MahasiswaController extends BaseController
         session()->setFlashdata('pesan', 'Mahasiswa berhasil ditambahkan.');
         return redirect()->to('/mahasiswa');
     }
+
+    public function delete($mhs_nrp)
+    {
+        $this->mahasiswaModel->delete($mhs_nrp);
+        return redirect()->to('/mahasiswa');
+    }
 }
