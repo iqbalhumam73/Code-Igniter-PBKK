@@ -68,6 +68,7 @@
                     </tbody>
                 </table>
                 <a href="/mahasiswa/tambah" class="btn btn-success">Tambah Mahasiswa Baru</a>
+                <br><br>
             </div>
         </div>
     </div>

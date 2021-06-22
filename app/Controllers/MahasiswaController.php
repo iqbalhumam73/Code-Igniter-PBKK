@@ -36,7 +36,7 @@ class MahasiswaController extends BaseController
     public function tambah()
     {
 
-        session();
+        // session();
         $data = [
             'validation' => \Config\Services::validation()
         ];
@@ -48,10 +48,32 @@ class MahasiswaController extends BaseController
     {
         // validasi input
         if (!$this->validate([
-            'mhs_nama' => 'required',
-            'mhs_urutan' => 'required',
-            'mhs_asalsekolah' => 'required',
-            'mhs_alamat' => 'required'
+            'mhs_nama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama mahasiswa harus diisi'
+                ]
+            ],
+            'mhs_urutan' => [
+                'rules' => 'required|is_unique[mahasiswa.mhs_urutan]',
+                'errors' => [
+                    'required' => 'Urutan mahasiswa harus diisi',
+                    'is_unique' => 'Urutan tersebut sudah diisi'
+                ]
+            ],
+            'mhs_asalsekolah' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Asal sekolah mahasiswa harus diisi'
+                ]
+            ],
+            'mhs_alamat' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Alamat mahasiswa harus diisi'
+                ]
+            ]
+
         ])) {
             $validation = \Config\Services::validation();
             // dd($validation);

@@ -37,28 +37,35 @@
                 <ul>
                     <br><br><br>
                     <h2>Tambah Mahasiswa</h2>
-                    <?php if (session()->getFlashdata('warning')) : ?>
-                        <div class="alert alert-warning" role="alert">
-                            <?= session()->getFlashdata('warning'); ?>
-                        </div>
-                    <?php endif; ?>
                     <form action="/mahasiswaController/Simpan" method="post">
                         <?= csrf_field(); ?>
                         <div class="mb-3">
                             <label for="mhs_nama" class="form-label">Nama Lengkap</label>
-                            <input type="name" class="form-control" id="mhs_nama" name="mhs_nama" autofocus>
+                            <input type="name" class="form-control <?= ($validation->hasError('mhs_nama')) ? 'is-invalid' : ''; ?>" id="mhs_nama" name="mhs_nama" autofocus value="<?= old('mhs_nama'); ?>">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('mhs_nama'); ?>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="mhs_urutan" class="form-label">Urutan</label>
-                            <input type="number" class="form-control" id="mhs_urutan" name="mhs_urutan">
+                            <input type="number" class="form-control <?= ($validation->hasError('mhs_urutan')) ? 'is-invalid' : ''; ?>" id="mhs_urutan" name="mhs_urutan" value="<?= old('mhs_urutan'); ?>">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('mhs_urutan'); ?>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="mhs_asalsekolah" class="form-label">Asal Sekolah</label>
-                            <input type="name" class="form-control" id="mhs_asalsekolah" name="mhs_asalsekolah">
+                            <input type="name" class="form-control <?= ($validation->hasError('mhs_asalsekolah')) ? 'is-invalid' : ''; ?>" id="mhs_asalsekolah" name="mhs_asalsekolah" value="<?= old('mhs_asalsekolah'); ?>">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('mhs_asalsekolah'); ?>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="mhs_alamat" class="form-label">Alamat</label>
-                            <input type="name" class="form-control" id="mhs_alamat" name="mhs_alamat">
+                            <input type="name" class="form-control <?= ($validation->hasError('mhs_alamat')) ? 'is-invalid' : ''; ?>" id="mhs_alamat" name="mhs_alamat" value="<?= old('mhs_alamat'); ?>">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('mhs_alamat'); ?>
+                            </div>
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
