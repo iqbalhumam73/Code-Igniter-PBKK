@@ -36,15 +36,25 @@
             <div class="col">
                 <br><br><br>
                 <h1 class="mt-30">Data Mahasiswa Arsitektur 2021</h1>
-                <?php if (session()->getFlashdata('pesan')) : ?>
+                <?php if (session()->getFlashdata('pesantambah')) : ?>
                     <div class="alert alert-info" role="alert">
-                        <?= session()->getFlashdata('pesan'); ?>
+                        <?= session()->getFlashdata('pesantambah'); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if (session()->getFlashdata('pesanhapus')) : ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= session()->getFlashdata('pesanhapus'); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if (session()->getFlashdata('pesanubah')) : ?>
+                    <div class="alert alert-warning" role="alert">
+                        <?= session()->getFlashdata('pesanubah'); ?>
                     </div>
                 <?php endif; ?>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col">Peringkat</th>
+                            <th scope="col">Urutan</th>
                             <th scope="col"> Nama Lengkap </th>
                             <th scope="col"> NRP </th>
                             <th scope="col"> Asal Sekolah </th>

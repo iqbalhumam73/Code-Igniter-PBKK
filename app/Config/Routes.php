@@ -36,6 +36,7 @@ $routes->get('/profil', 'Pages::index');
 $routes->get('/mahasiswa', 'MahasiswaController::index');
 $routes->get('/mahasiswa/detail/(:segment)', 'MahasiswaController::detail/$1');
 $routes->get('/mahasiswa/tambah', 'MahasiswaController::tambah');
+$routes->get('/mahasiswa/editmahasiswa/(:segment)', 'MahasiswaController::editmahasiswa/$1');
 
 /*
  * --------------------------------------------------------------------

@@ -42,8 +42,8 @@
                     <h4>Asal Sekolah : <?= $mahasiswa['mhs_asalsekolah']; ?> </h4>
                     <h4>Alamat : <?= $mahasiswa['mhs_alamat']; ?> </h4>
                     <br>
-                    <a href="" class="btn btn-warning">Edit Mahasiswa</a>
-                    <a href="/MahasiswaController/delete/<?= $mahasiswa['mhs_nrp']; ?>" class="btn btn-danger">Hapus Mahasiswa</a>
+                    <a href="/mahasiswa/editmahasiswa/<?= $mahasiswa['mhs_nrp']; ?>" class="btn btn-warning">Edit Mahasiswa</a>
+                    <a href="/MahasiswaController/delete/<?= $mahasiswa['mhs_nrp']; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus mahasiswa ini?')" ;>Hapus Mahasiswa</a>
                     <a href="/mahasiswa" class="btn btn-primary">Kembali</a>
                 </ul>
             </div>
